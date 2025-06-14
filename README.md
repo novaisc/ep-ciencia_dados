@@ -1,4 +1,4 @@
-# Program - Análise de Dados Cognitivos
+# EP de Ciência de dados - Análise de Dados Cognitivos
 
 Este projeto realiza a análise de dados de desempenho cognitivo humano, utilizando técnicas de pré-processamento, manipulação de datasets e modelos de aprendizado de máquina para prever a pontuação cognitiva com base em diferentes variáveis.
 
