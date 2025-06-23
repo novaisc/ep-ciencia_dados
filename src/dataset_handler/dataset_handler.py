@@ -28,9 +28,6 @@ class DatasetHandler:
         after = self.data.shape[0]
         print(f"{before - after} linhas removidas.")
         return self.data
-    
-    def show_dataset(self):
-        print(self.data)
 
     def get_data(self):
         return self.data

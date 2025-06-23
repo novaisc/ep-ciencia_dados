@@ -6,3 +6,7 @@ COLUMNS_TO_REMOVE = ["AI_Predicted_Score", "User_ID"]
 
 CATEGORICAL_COLUMNS = ["Gender", "Diet_Type", "Exercise_Frequency"]
 TARGET_COLUMN = "Cognitive_Score"
+
+PATH_TO_RESULTS = "src/data/results/"
+
+PATH_TO_PLOTS = "src/plots"
