@@ -12,7 +12,8 @@ from sklearn.svm import SVR
 from sklearn.neural_network import MLPRegressor
 
 from sklearn.model_selection import train_test_split
-import pandas as pd
+import time
+
 
 def main():
     print("Iniciando o processo de treinamento e avaliação dos modelos...")
@@ -43,7 +44,7 @@ def main():
     runner.add_model("Random Forest", RandomForestRegressor(n_estimators=100, random_state=42))
     runner.add_model("Gradient Boosting", GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, random_state=42))
     runner.add_model("KNN", KNeighborsRegressor(n_neighbors=5))
-    runner.add_model("SVR", SVR(kernel='rbf'))
+    runner.add_model("SVR", SVR(kernel="rbf"))
     runner.add_model("MLP", MLPRegressor(hidden_layer_sizes=(100,), max_iter=500, random_state=42))
 
     # Treina e avalia na validação
@@ -71,6 +72,11 @@ def main():
         plotter.plot_erro_vs_score_real(pred_df, model_name)
         plotter.plot_faixa_de_score(pred_df, model_name)
 
-    plotter.plot_model_comparison(all_test_results, metrics_to_plot=['MAE', 'RMSE', 'R2'])
+    plotter.plot_model_comparison(all_test_results, metrics_to_plot=["MAE", "RMSE", "R2"])
+
+
 if __name__ == "__main__":
+    start = time.time()
     main()
+    end = time.time()
+    print(f"Tempo total de execução: {end - start:.2f} segundos")
